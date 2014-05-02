@@ -21,9 +21,9 @@ end
 
 post "/create_survey" do
   # params from form should be { title: "Title", question1: "Q1", question2: "Q2", question3: "Q3", etc. }
-  input = JSON.parse(params).values
-  survey = Survey.create(title: input.shift)
-  input.each do |q|
+  survey = Survey.create(name: params[:name])
+  params.shift
+  params.values.each do |q|
     survey.questions << Question.create(question: q )
   end
   @survey_id = survey.id
