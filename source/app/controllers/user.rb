@@ -1,3 +1,9 @@
+post "/create_user" do
+  user = User.create(username: params[:username], password: params[:password])
+  session[:user_id] = user.id
+  redirect "/"
+end
+
 post "/login" do
   user = User.find_by_username(params[:username])
   session[:user_id] = user.authenticate(params[:password])
