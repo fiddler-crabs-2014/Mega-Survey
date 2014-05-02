@@ -9,8 +9,8 @@ post "/create_user" do
   end
 end
 
-post "/login" do
-  user = User.find_by_username(params[:username])
+post "/signin" do
+  user = User.find_by_username(params[:login])
   session[:user_id] = user.authenticate(params[:password])
   if session[:user_id]
     # successfully authenticated; set up session
