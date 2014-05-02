@@ -7,15 +7,15 @@ $('a#sign-out').on("click", function (e) {
     request.done(function () { window.location = "/"; });
 }); //a#sign-out
 
-  $('#sign-in').submit(function (e) {
-    e.preventDefault();
+  $('#signinform').submit(function(e) {
+    e.preventDefault(console.log("ajax intercept"));
     $.ajax({
       type: 'POST',
-      url: '/sessions',
-      data: $("#sign-in").serialize(),
+      url: '/signin',
+      data: $("#signinform").serialize(),
       success: function(){
       console.log("User logged in"),
-      window.location = '/';}
+      window.location.replace("/");}
       }); //$ajax
     }); //#sign-in
   }); //document ready
