@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"> -->
 
 
+ <% DERP = false; %>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
@@ -23,24 +24,27 @@
 </head>
 <body>
   <header>
-    <span class="topper"><a href="/">Mega Survey</a></span>
-    <nav>
-      <ul>
-        <% if true #session[:user] %>
+      <div id='topleft'>  <a href="/">Mega Survey</a>  </div>
+      <div id='topcenter'> <%  if session[:user] || DERP %> <a href="/survey">Create Survey</a>
+      <% else %>  <a href="/">Create an Account!</a>  <% end %> </div>
+      <div id='topright'>
+        <% if session[:user] || DERP %>
          <li><a href="/signout">Sign out</a></li>
-         <li><a href="/survey">Create Survey    ---</a></li>
-
+         <li><a href="/profile">Profile</a></li>
          <% else %>
-          <li><form id=signin method="post" action="/signin">
-            <input size="10" type="text" name="login" value="" placeholder="Username">
-            <input size="10" type="password" name="password" value="" placeholder="Password">
-            <input type="submit" name="commit" value="Login">
+
+          <li><form id="signinform" method="post" action="/signin">
+
+            <input size="6" type="text" name="login" value="" placeholder="Username">
+            <input size="6" type="password" name="password" value="" placeholder="Password">
+            <input id="sign-in" type="submit" name="commit" value="Login">
           </form></li>
           <li><a href="/signup">Sign up</a></li>
 
-        <% end %>
-      </ul>
-    </nav>
+    <% end %>
+
+ </div>
+
   </header>
 
   <%= yield %>
