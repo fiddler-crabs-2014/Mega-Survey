@@ -1,5 +1,13 @@
-<form action="/login" method="POST">
-  Username: <input type="text" name="username">
-  Password: <input type="password" name="password">
-  <input type="submit" name="Log In">
-</form>
+
+<div class="container">
+  <h1>Welcome to Mega Survey!</h1>
+
+  <h2> Register for mega survey</h2>
+    <form id=signin method="post" action="/signin">
+      <input type="text" name="login" value="" placeholder="Username"><br>
+      <input type="text" name="email" value="" placeholder="email"><br>
+      <input type="password" name="password" value="" placeholder="Password"><br>
+      <input type="password" name="password_conf" value="" placeholder="Password"><br>
+      <input type="submit" name="commit" value="Login">
+    </form>
+</div>
