@@ -1,5 +1,5 @@
 post "/create_user" do
-  user = User.create(username: params[:username], password: params[:password])
+  user = User.create(username: params[:login], password: params[:password])
   if user.valid?
     session[:user_id] = user.id
     redirect "/"
@@ -34,5 +34,10 @@ get "/user_id/:id" do
   else
     redirect "/"
   end
+end
+
+get "/signout" do
+  session.clear
+  redirect "/"
 end
 
