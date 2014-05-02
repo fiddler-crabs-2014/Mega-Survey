@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
 // send an HTTP DELETE request for the sign-out link
-$('a#sign-out').on("click", function (e) {
-    e.preventDefault();
-    var request = $.ajax({ url: $(this).attr('href'), type: 'delete' });
+$('#signout').on("click", function (e) {
+    e.preventDefault(console.log("AJAX intercepted logout"));
+    var request = $.ajax({ url: '/signout', type: 'get' });
     request.done(function () { window.location = "/"; });
 }); //a#sign-out
 

@@ -29,7 +29,7 @@
       <% else %>  <a href="/">Create an Account!</a>  <% end %> </div>
       <div id='topright'>
         <% if session[:user_id] || DERP %>
-         <li><a href="/signout">Sign out</a></li>
+         <li><a id="signout" href="/signout">Sign out</a></li>
          <li><a href="/profile">Profile</a></li>
          <% else %>
 
