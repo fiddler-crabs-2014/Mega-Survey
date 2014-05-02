@@ -10,7 +10,19 @@ get "/take_survey/:id" do
   erb :survey
 end
 
-get "/survery/results/:id" do
+post '/save_answers/:id' do
+  @survey = Survey.find(params[:id])
+  @user_id = session[:user_id]
+
+  answers = params.values.take(@survey.questions.length)
+
+  @survey.questions.each do |question|
+    question.answers << Answer.create(:answer => answers.shift, :user_id => @user_id)
+  end
+  redirect '/survey/results/' + @survey.id
+end
+
+get "/survey/results/:id" do
   @survey = Survey.find(params[:id])
   erb :survey_result
 end
