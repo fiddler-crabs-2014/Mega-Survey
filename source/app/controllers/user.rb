@@ -1,10 +1,9 @@
 post "/login" do
-  @email = params[:email]
-  user = User.authenticate(@email, params[:password])
-  if user
+  user = User.find_by_username(params[:username])
+  session[:user_id] = user.authenticate(params[:password])
+  if session[:user_id]
     # successfully authenticated; set up session
-    session[:user_id] = user.id
-    # AJAX redirects user to "/surveys" if JSON is true
+    # AJAX renders "/surveys" if JSON is true
     { auth: true }.to_json
   else
     # an error occurred, jQuery displays an error
