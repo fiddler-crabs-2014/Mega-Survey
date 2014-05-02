@@ -1,0 +1,10 @@
+<h2>Take <%= @survey.name %> survey!</h2>
+<h3> by: <%= @survey.user.username %> </h3>
+
+
+<div>
+  <% @survey.questions.each do |question| %>
+    <div> <%= question.question %> </div><br>
+  <% end %>
+
+</div>
