@@ -1,10 +1,18 @@
 <h2>Take <%= @survey.name %> survey!</h2>
 <h3> by: <%= @survey.user.username %> </h3>
-
-
-<div>
-  <% @survey.questions.each do |question| %>
-    <div> <%= question.question %> </div><br>
-  <% end %>
-
-</div>
+  <div>
+  <form method="post" action="/save_answers/<%= @survey.id %>">
+    <% @survey.questions.each do |question| %>
+      <div> <%= question.question %> </div><br>
+        <!-- <form> -->
+          <input type="radio" name="Question_<%= question.id %>" value="1"> Fuck that &nbsp; &nbsp;
+          <input type="radio" name="Question_<%= question.id %>" value="2"> Not Really &nbsp; &nbsp;
+          <input type="radio" name="Question_<%= question.id %>" value="3"> -_- &nbsp; &nbsp;
+          <input type="radio" name="Question_<%= question.id %>" value="4"> It's Good! &nbsp; &nbsp;
+          <input type="radio" name="Question_<%= question.id %>" value="5"> I WANT IT NOW &nbsp; &nbsp;
+          <br><br>
+        <!-- </form><br> -->
+    <% end %><br>
+    <input type="submit" name="submit" value="Send Answers!">
+  </form>
+  </div>

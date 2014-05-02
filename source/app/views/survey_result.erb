@@ -1,0 +1,7 @@
+<% @survey.questions.each do |question| %>
+  <h2><%= question.question %></h2>
+  <% question.answers.map do |answer| %>
+    <p><%= answer.answer %></p>
+  <% end %>
+<% end %>
+
