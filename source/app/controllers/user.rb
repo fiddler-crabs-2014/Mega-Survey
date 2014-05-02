@@ -1,7 +1,12 @@
 post "/create_user" do
   user = User.create(username: params[:username], password: params[:password])
-  session[:user_id] = user.id
-  redirect "/"
+  if user.valid?
+    session[:user_id] = user.id
+    redirect "/"
+  else
+    @errors = user.errors.full_messages
+    erb :index
+  end
 end
 
 post "/login" do
