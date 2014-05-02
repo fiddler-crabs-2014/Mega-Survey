@@ -29,4 +29,3 @@ post "/create_survey" do
   @survey_id = survey.id
   redirect "/surveys"
 end
-
