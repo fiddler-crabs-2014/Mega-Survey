@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
@@ -11,6 +11,10 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
+  <!-- pure.css -->
+<!--   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"> -->
+
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
@@ -18,6 +22,27 @@
   <title></title>
 </head>
 <body>
+  <header>
+    <span class="topper"><a href="/">Mega Survey</a></span>
+    <nav>
+      <ul>
+        <% if true #session[:user] %>
+         <li><a href="/signout">Sign out</a></li>
+         <li><a href="/survey">Create Survey    ---</a></li>
+
+         <% else %>
+          <li><form id=signin method="post" action="/signin">
+            <input size="10" type="text" name="login" value="" placeholder="Username">
+            <input size="10" type="password" name="password" value="" placeholder="Password">
+            <input type="submit" name="commit" value="Login">
+          </form></li>
+          <li><a href="/signup">Sign up</a></li>
+
+        <% end %>
+      </ul>
+    </nav>
+  </header>
+
   <%= yield %>
 </body>
 </html>
