@@ -1,0 +1,223 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1899" measuredH="833" mockupW="1878" mockupH="815">
+  <controls>
+    <control controlID="5" controlTypeID="__group__" x="21" y="18" w="387" h="511" measuredW="387" measuredH="511" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="387" h="511" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="5">
+          <controlProperties>
+            <text>Survey%20Gorilla%0Ahttp%3A//localhost%3A9393</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::MultilineButton" x="88" y="206" w="210" h="164" measuredW="146" measuredH="138" zOrder="1" locked="false" isInGroup="5">
+          <controlProperties>
+            <text>REGISTER%20FOR%0ASURVEY%20GORILLA%0A%20%0Ausername%3A%20_______%0Aemail%3A%20_______%0Apassword%3A%20_______%0Aconfirm%20password%3A%20________</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="130" w="387" h="37" measuredW="425" measuredH="29" zOrder="2" locked="false" isInGroup="5">
+          <controlProperties>
+            <text>Survey%20Gorilla%09%09%09%20%20%20%20username%3A%20___%20password%3A%20____</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="19" controlTypeID="__group__" x="439" y="18" w="477" h="400" measuredW="477" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="__group__" x="0" y="0" w="477" h="400" measuredW="477" measuredH="400" zOrder="0" locked="false" isInGroup="19">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="477" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="0">
+              <controlProperties>
+                <text>Survey%20Gorilla%0Ahttp%3A//localhost%3A9393/surveys</text>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::List" x="49" y="123" w="141" h="245" measuredW="100" measuredH="279" zOrder="1" locked="false" isInGroup="0">
+              <controlProperties>
+                <text>Survey%20One%0Aby%20user2%0ATake%20%20%20%20%20View%0A%20%0ASurvey%20Two%0Aby%20user1%0ATake%20%20%20%20%20View%0A%20%0ASurvey%20Three%0Aby%20user40%0ATake%20%20%20%20%20View%0A%20%0A%20</text>
+              </controlProperties>
+            </control>
+            <control controlID="2" controlTypeID="com.balsamiq.mockups::SubTitle" x="190" y="96" w="99" h="-1" measuredW="90" measuredH="27" zOrder="2" locked="false" isInGroup="0">
+              <controlProperties>
+                <text>Surveys</text>
+              </controlProperties>
+            </control>
+            <control controlID="3" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="67" w="477" h="29" measuredW="463" measuredH="29" zOrder="3" locked="false" isInGroup="0">
+              <controlProperties>
+                <text>Survey%20Gorilla%09%09%20%20%20%20%20%20%20Create%20Survey%20%20%09%20%20%20%20%20%20%20Profile%20%20Logout</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Arrow" x="755" y="99" w="322" h="42" measuredW="150" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="__group__" x="931" y="18" w="491" h="400" measuredW="491" measuredH="400" zOrder="2" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="491" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="28">
+          <controlProperties>
+            <text>Survey%20Gorilla%0Ahttp%3A//localhost%3A9393/create_survey</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::List" x="170" y="123" w="149" h="165" measuredW="100" measuredH="153" zOrder="1" locked="false" isInGroup="28">
+          <controlProperties>
+            <text>Question1%3A%20____%0AQuestion2%3A%20____%0AQuestion3%3A%20____%0AQuestion4%3A%20____%0AQuestion5%3A%20____%0A%20%0AAdd%20Question</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::SubTitle" x="170" y="96" w="149" h="-1" measuredW="132" measuredH="27" zOrder="2" locked="false" isInGroup="28">
+          <controlProperties>
+            <text>New%20Survey</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="67" w="475" h="29" measuredW="463" measuredH="29" zOrder="3" locked="false" isInGroup="28">
+          <controlProperties>
+            <text>Survey%20Gorilla%09%09%20%20%20%20%20%20%20Create%20Survey%20%20%09%20%20%20%20%20%20%20Profile%20%20Logout</text>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="170" y="321" w="147" h="27" measuredW="139" measuredH="27" zOrder="4" locked="false" isInGroup="28">
+          <controlProperties>
+            <text>Create%20This%20Survey%21</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::Arrow" x="547" y="201" w="128" h="343" measuredW="150" measuredH="100" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="__group__" x="439" y="433" w="477" h="400" measuredW="477" measuredH="400" zOrder="4" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="__group__" x="0" y="0" w="477" h="400" measuredW="477" measuredH="400" zOrder="0" locked="false" isInGroup="33">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="__group__" x="0" y="0" w="477" h="400" measuredW="477" measuredH="400" zOrder="0" locked="false" isInGroup="0">
+              <groupChildrenDescriptors>
+                <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="477" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>Survey%20Gorilla%0Ahttp%3A//localhost%3A9393/take_survey/%3Aid</text>
+                  </controlProperties>
+                </control>
+                <control controlID="1" controlTypeID="com.balsamiq.mockups::List" x="177" y="166" w="141" h="161" measuredW="100" measuredH="153" zOrder="1" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>Survey%20One%0A%20%0AQuestion%201%3F%20%281..5%29%0AQuestion%202%3F%20%281..5%29%0AQuestion%203%3F%20%281..5%29%0AQuestion%204%3F%20%281..5%29%0AQuestion%205%3F%20%281..5%29</text>
+                  </controlProperties>
+                </control>
+                <control controlID="2" controlTypeID="com.balsamiq.mockups::SubTitle" x="177" y="104" w="158" h="-1" measuredW="137" measuredH="27" zOrder="2" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>%20Survey%20One</text>
+                  </controlProperties>
+                </control>
+                <control controlID="3" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="67" w="477" h="29" measuredW="463" measuredH="29" zOrder="3" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>Survey%20Gorilla%09%09%20%20%20%20%20%20%20Create%20Survey%20%20%09%20%20%20%20%20%20%20Profile%20%20Logout</text>
+                  </controlProperties>
+                </control>
+                <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="169" y="334" w="158" h="27" measuredW="149" measuredH="27" zOrder="4" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>Submit%20your%20answers%21</text>
+                  </controlProperties>
+                </control>
+                <control controlID="5" controlTypeID="com.balsamiq.mockups::TextArea" x="206" y="131" w="83" h="25" measuredW="200" measuredH="140" zOrder="5" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>by%3A%20user2</text>
+                  </controlProperties>
+                </control>
+              </groupChildrenDescriptors>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="36" controlTypeID="__group__" x="590" y="194" w="964" h="639" measuredW="964" measuredH="639" zOrder="6" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="10" controlTypeID="com.balsamiq.mockups::Arrow" x="0" y="0" w="513" h="342" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="36">
+          <controlProperties>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="13" controlTypeID="__group__" x="340" y="238" w="624" h="401" measuredW="624" measuredH="401" zOrder="0" locked="false" isInGroup="36">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="__group__" x="0" y="0" w="493" h="400" measuredW="493" measuredH="400" zOrder="0" locked="false" isInGroup="13">
+              <groupChildrenDescriptors>
+                <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="493" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>Survey%20Gorilla%0Ahttp%3A//localhost%3A9393/survey/results/%3Aid</text>
+                  </controlProperties>
+                </control>
+                <control controlID="1" controlTypeID="com.balsamiq.mockups::List" x="32" y="156" w="142" h="171" measuredW="100" measuredH="174" zOrder="1" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>Here%20are%20the%20results%3A%0A%20%0AFor%20Question1%20%3A%0ARating%201%3A%206%20people%20%0ARating%202%3A%201%20people%20%0ARating%203%3A%202%20people%20%0ARating%204%3A%203%20people%20%0ARating%205%3A%20111%20people%20</text>
+                  </controlProperties>
+                </control>
+                <control controlID="2" controlTypeID="com.balsamiq.mockups::SubTitle" x="167" y="104" w="149" h="-1" measuredW="137" measuredH="27" zOrder="2" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>%20Survey%20One</text>
+                  </controlProperties>
+                </control>
+                <control controlID="3" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="67" w="450" h="29" measuredW="463" measuredH="29" zOrder="3" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>Survey%20Gorilla%09%09%20%20%20%20%20%20%20Create%20Survey%20%20%09%20%20%20%20%20%20%20Profile%20%20Logout</text>
+                  </controlProperties>
+                </control>
+                <control controlID="4" controlTypeID="com.balsamiq.mockups::TextArea" x="194" y="131" w="78" h="25" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>by%3A%20user2</text>
+                  </controlProperties>
+                </control>
+                <control controlID="5" controlTypeID="com.balsamiq.mockups::PieChart" x="272" y="151" w="123" h="180" measuredW="180" measuredH="180" zOrder="5" locked="false" isInGroup="0"/>
+              </groupChildrenDescriptors>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::Arrow" x="369" y="267" w="-1" h="-1" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="13">
+              <controlProperties>
+                <text/>
+              </controlProperties>
+            </control>
+            <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="499" y="374" w="-1" h="-1" measuredW="125" measuredH="27" zOrder="2" locked="false" isInGroup="13">
+              <controlProperties>
+                <text>STRETCH%20GOAL%21</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="37" controlTypeID="__group__" x="1449" y="18" w="450" h="400" measuredW="450" measuredH="400" zOrder="7" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="6" controlTypeID="__group__" x="0" y="0" w="450" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="37">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="6">
+              <controlProperties>
+                <text>Survey%20Gorilla%0Ahttp%3A//localhost%3A9393/user_id/%3Aid</text>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::List" x="155" y="187" w="141" h="165" measuredW="100" measuredH="132" zOrder="1" locked="false" isInGroup="6">
+              <controlProperties>
+                <text>User%20info%3A%0AEmail%3A%0A%20%0ASurveys%20Answered%0A%20%0ASurveys%20Created</text>
+              </controlProperties>
+            </control>
+            <control controlID="2" controlTypeID="com.balsamiq.mockups::SubTitle" x="190" y="96" w="71" h="-1" measuredW="68" measuredH="27" zOrder="2" locked="false" isInGroup="6">
+              <controlProperties>
+                <text>Profile</text>
+              </controlProperties>
+            </control>
+            <control controlID="3" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="67" w="450" h="29" measuredW="463" measuredH="29" zOrder="3" locked="false" isInGroup="6">
+              <controlProperties>
+                <text>Survey%20Gorilla%09%09%20%20%20%20%20%20%20Create%20Survey%20%20%09%20%20%20%20%20%20%20Profile%20%20Logout</text>
+              </controlProperties>
+            </control>
+            <control controlID="4" controlTypeID="com.balsamiq.mockups::TextArea" x="197" y="123" w="57" h="25" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="6">
+              <controlProperties>
+                <text>user2</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Arrow" x="1298" y="99" w="230" h="28" measuredW="150" measuredH="100" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
