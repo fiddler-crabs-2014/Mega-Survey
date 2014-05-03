@@ -1,6 +1,20 @@
-<% @survey.questions.each do |question| %>
-  <h2><%= question.question %></h2>
-  <p>Average: <%= average_result(question.id).round(2) %></p>
-  <p>Based on <%= question.answers.length %> responses.</p>
-<% end %>
+
+<div class= "container">
+  <h1><%= @survey.name %></h1>
+  <h3>By: <%= @survey.user.username %></h3>
+
+  <h4>This survey has been completed <%= times = @survey.questions.first.answers.count %> <%= times ==1 ? "time" : "times" %>.</h4>
+  <br>
+
+  <% @survey.questions.each_with_index do |question, index| %>
+
+    <h2><%= question.question %></h2>
+      <% for j in (1..5) %>
+        <p><% @users = @survey.questions[index].answers.where(answer:(j)).count %></p>
+        <p><%= @users %> <%= @users ==1 ? "user" : "users" %> gave a rating of <%= (j) %></p>
+      <% end %>
+  <% end %>
+
+</div>
+
 

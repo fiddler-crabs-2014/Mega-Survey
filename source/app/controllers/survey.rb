@@ -31,16 +31,10 @@ end
 
 post "/create_survey" do
   # params from form should be { title: "Title", question1: "Q1", question2: "Q2", question3: "Q3", etc. }
-  survey = Survey.create(name: params[:name], user_id: session[:user_id])
-  p "Before Shift"
-  p params
+  survey = Survey.create(name: params[:name], user: User.find(session[:user_id]))
   params.shift
-  p "AFTER Shift"
-  p params
-  p "VALUES"
-  p params.values
+
   params.values.each do |q|
-    p q
     survey.questions << Question.create(question: q )
   end
   @survey_id = survey.id
