@@ -1,4 +1,3 @@
-
 <div class= "container">
   <h1><%= @survey.name %></h1>
   <h3>By: <%= @survey.user.username %></h3>
@@ -10,8 +9,8 @@
 
     <h2><%= question.question %></h2>
       <% for j in (1..5) %>
-        <p><% @users = @survey.questions[index].answers.where(answer:(j)).count %></p>
-        <p><%= @users %> <%= @users ==1 ? "user" : "users" %> gave a rating of <%= (j) %></p>
+        <p><% @users_count = @survey.questions[index].answers.where(answer:(j)).count %></p>
+        <p><%= @users_count %> <%= @users_count ==1 ? "user" : "users" %> said <%= answer_to_text(j,@users_count) %></p>
       <% end %>
       <% if question.answers.any? %>
         <p>Average: <%= average_result(question.id).round(2) %></p>
@@ -19,5 +18,3 @@
       <% end %>
   <% end %>
 </div>
-
-
