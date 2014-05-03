@@ -13,9 +13,9 @@
         <p><% @users = @survey.questions[index].answers.where(answer:(j)).count %></p>
         <p><%= @users %> <%= @users ==1 ? "user" : "users" %> gave a rating of <%= (j) %></p>
       <% end %>
-      <% if question.answers.empty? %>
-      <% else %>
+      <% if question.answers.any? %>
         <p>Average: <%= average_result(question.id).round(2) %></p>
+      <% else %>
       <% end %>
   <% end %>
 </div>
