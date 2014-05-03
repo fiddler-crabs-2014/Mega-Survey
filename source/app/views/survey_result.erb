@@ -15,7 +15,7 @@
 
       <% end %>
       <% if question.answers.any? %>
-        <p>Average: <%= average_result(question.id).round(2) %> out of 5</p>
+        <h3>Average: <%= average_result(question.id).round(2) %> out of 5</h3>
         <br>
       <% end %>
       <div id="question<%= index %>" style="width: 600px; height: 400px"></div>
