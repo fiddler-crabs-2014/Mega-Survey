@@ -1,7 +1,18 @@
-<% @survey.questions.each do |question| %>
-  <h2><%= question.question %></h2>
-  <% question.answers.map do |answer| %>
-    <p><%= answer.answer %></p>
+<div class= "container">
+  <h1><%= @survey.name %></h1>
+  <h3>By: <%= @survey.user.username %></h3>
+
+  <h4>This survey has been completed <%= @survey.questions.first.answers.count %> time(s).</h4>
+  <br>
+
+  <% @survey.questions.each_with_index do |question, index| %>
+
+    <h2><%= question.question %></h2>
+      <% for j in (1..5) %>
+        <p><% @users = @survey.questions[index].answers.where(answer:(j)).count %></p>
+        <p><%= @users %> <%= @users ==1 ? "loser" : "users" %> gave a rating of <%= (j) %></p>
+      <% end %>
   <% end %>
-<% end %>
+
+</div>
 
