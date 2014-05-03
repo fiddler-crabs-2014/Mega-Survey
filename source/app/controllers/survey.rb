@@ -13,13 +13,11 @@ end
 post '/save_answers/:id' do
   @survey = Survey.find(params[:id])
   @user_id = session[:user_id]
-
   answers = params.values.take(@survey.questions.length)
-
   @survey.questions.each do |question|
     question.answers << Answer.create(:answer => answers.shift, :user_id => @user_id)
   end
-  redirect '/survey/results/' + @survey.id
+  redirect "/survey/results/#{@survey.id}"
 end
 
 get "/survey/results/:id" do

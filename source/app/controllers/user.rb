@@ -11,7 +11,7 @@ end
 
 post "/signin" do
   user = User.find_by_username(params[:login])
-  session[:user_id] = user.authenticate(params[:password])
+  session[:user_id] = user.authenticate(params[:password]).id
   if session[:user_id]
     # successfully authenticated; set up session
     # AJAX renders "/surveys" if JSON is true
