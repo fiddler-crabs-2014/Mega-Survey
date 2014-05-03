@@ -13,7 +13,8 @@
         <p><%= @users_count %> <%= @users_count ==1 ? "user" : "users" %> said <%= answer_to_text(j,@users_count) %></p>
       <% end %>
       <% if question.answers.any? %>
-        <p>Average: <%= average_result(question.id).round(2) %></p>
+        <p>Average: <%= average_result(question.id).round(2) %> out of 5</p>
+        <br>
       <% else %>
       <% end %>
   <% end %>
