@@ -1,13 +1,14 @@
 <h2>Create Survey</h2>
 
-<div class="survey">
+<div id="survey" class="survey">
   <form action="/create_survey" method="POST">
     Title: <input type="text" name="name">
-    Question 1: <input type="text" name="question1">
-    Question 2: <input type="text" name="question2">
-    Question 3: <input type="text" name="question3">
-    Question 4: <input type="text" name="question4">
-    Question 5: <input type="text" name="question5">
-    <input type="submit" value="Create Survey">
+    <p id="question1">Question 1: <input type="text"></p>
+    <p id="question2">Question 2: <input type="text"></p>
+    <p id="question3">Question 3: <input type="text"></p>
+    <p id="question4">Question 4: <input type="text"></p>
+    <p id="question5">Question 5: <input type="text"></p>
+    <button id="add_question" type="button">Add Question</button>
+    <input id="submit" type="submit" value="Create Survey">
   </form>
 </div>
