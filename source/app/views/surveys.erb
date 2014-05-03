@@ -1,10 +1,16 @@
-<h2>Surveys</h2>
+<div class="container">
+<h1>Surveys</h1>
+<br>
 
-<% @surveys.each do |survey| %>
-  <div class="survey">
-    <h2>Name: <%= survey.name %></h2>
-    <p>created by: <%= survey.user.username %></p>
-    <a href="/take_survey/<%= survey.id %>">Take Survey</a>
-    <a href="/survey/results/<%= survey.id %>">View Survey</a>
-  </div>
-<% end %>
+  <% @surveys.each do |survey| %>
+    <div class="survey">
+      <h2><%= survey.name %></h2>
+      <p>created by: <%= survey.user.username %></p>
+      <a href="/take_survey/<%= survey.id %>">Take Survey</a>
+      <a href="/survey/results/<%= survey.id %>">View Survey</a>
+    </div>
+    <br>
+    <br>
+  <% end %>
+
+</div>

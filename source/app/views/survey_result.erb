@@ -15,7 +15,6 @@
       <% if question.answers.any? %>
         <p>Average: <%= average_result(question.id).round(2) %> out of 5</p>
         <br>
-      <% else %>
       <% end %>
   <% end %>
 </div>
