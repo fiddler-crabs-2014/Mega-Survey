@@ -1,5 +1,5 @@
 post "/create_user" do
-  user = User.create(username: params[:username], password: params[:password])
+  user = User.create(username: params[:login], password: params[:password])
   if user.valid?
     session[:user_id] = user.id
     redirect "/"
@@ -11,7 +11,7 @@ end
 
 post "/signin" do
   user = User.find_by_username(params[:login])
-  session[:user_id] = user.authenticate(params[:password])
+  session[:user_id] = user.authenticate(params[:password]).id
   if session[:user_id]
     # successfully authenticated; set up session
     # AJAX renders "/surveys" if JSON is true
@@ -34,5 +34,10 @@ get "/user_id/:id" do
   else
     redirect "/"
   end
+end
+
+get "/signout" do
+  session.clear
+  redirect "/"
 end
 

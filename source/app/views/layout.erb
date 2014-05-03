@@ -29,17 +29,17 @@
       <% else %>  <a href="/">Create an Account!</a>  <% end %> </div>
       <div id='topright'>
         <% if session[:user_id] || DERP %>
-         <li><a href="/signout">Sign out</a></li>
+         <li><a id="signout" href="/signout">Sign out</a></li>
          <li><a href="/profile">Profile</a></li>
          <% else %>
 
-          <li><form id="signinform" method="post" action="/signin">
+          <li><form id="signinform" method="post" action="/asfasfdadsfas">
 
             <input size="6" type="text" name="login" value="" placeholder="Username">
             <input size="6" type="password" name="password" value="" placeholder="Password">
             <input id="sign-in" type="submit" name="commit" value="Login">
           </form></li>
-          <li><a href="/signup">Sign in</a></li>
+          <li><a href="/">Sign in</a></li>
 
     <% end %>
 
