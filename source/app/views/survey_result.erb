@@ -18,88 +18,42 @@
         <p>Average: <%= average_result(question.id).round(2) %> out of 5</p>
         <br>
       <% end %>
-      <div id="question<%= question.id %>" style="width: 600px; height: 400px"></div>
+      <div id="question<%= index %>" style="width: 600px; height: 400px"></div>
     </div>
   <% end %>
 </div>
 
+
 <script type="text/javascript">
 function drawVisualization() {
   questions = $('.question');
-
+  console.log(questions)
   // Create and populate the data table.
 
-  var count1 = parseInt($($(questions[0]).find('p')[0]).text()[0]);
-  var count2 = parseInt($($(questions[0]).find('p')[1]).text()[0]);
-  var count3 = parseInt($($(questions[0]).find('p')[2]).text()[0]);
-  var count4 = parseInt($($(questions[0]).find('p')[3]).text()[0]);
-  var count5 = parseInt($($(questions[0]).find('p')[4]).text()[0]);
+  for ( var q=0; q<questions.length; q++ )
+    {
+      console.log(q);
+      var count1 = parseInt($($(questions[q]).find('p')[0]).text()[0]);
+      var count2 = parseInt($($(questions[q]).find('p')[1]).text()[0]);
+      var count3 = parseInt($($(questions[q]).find('p')[2]).text()[0]);
+      var count4 = parseInt($($(questions[q]).find('p')[3]).text()[0]);
+      var count5 = parseInt($($(questions[q]).find('p')[4]).text()[0]);
+      var data = google.visualization.arrayToDataTable([
+        ['Opinion', 'Count'],
+        ['Really don\'t like it', count1],
+        ['It\'s just okay', count2],
+        ['They\'re indifferent', count3],
+        ['It\'s good', count4],
+        ['Love it!!', count5]
 
-  var data1 = google.visualization.arrayToDataTable([
-    ['Opinion', 'Count'],
-    ['Love it!!', count1],
-    ['It\'s good', count2],
-    ['They\'re indifferent', count3],
-    ['It\'s just okay', count4],
-    ['Really don\'t like it', count5]
-  ]);
+        ]);
 
-  var data2 = google.visualization.arrayToDataTable([
-    ['Opinion', 'Count'],
-    ['Love it!!', 20],
-    ['It\'s good', 2],
-    ['They\'re indifferent', 2],
-    ['It\'s just okay', 2],
-    ['Really don\'t like it', 7]
-  ]);
-
-  var data3 = google.visualization.arrayToDataTable([
-    ['Opinion', 'Count'],
-    ['Love it!!', 20],
-    ['It\'s good', 2],
-    ['They\'re indifferent', 2],
-    ['It\'s just okay', 2],
-    ['Really don\'t like it', 7]
-  ]);
-
-  var data4 = google.visualization.arrayToDataTable([
-    ['Opinion', 'Count'],
-    ['Love it!!', 20],
-    ['It\'s good', 2],
-    ['They\'re indifferent', 2],
-    ['It\'s just okay', 2],
-    ['Really don\'t like it', 7]
-  ]);
-
-  var data5 = google.visualization.arrayToDataTable([
-    ['Opinion', 'Count'],
-    ['Love it!!', 20],
-    ['It\'s good', 2],
-    ['They\'re indifferent', 2],
-    ['It\'s just okay', 2],
-    ['Really don\'t like it', 7]
-  ]);
-
-  // Create and draw the visualization.
-  new google.visualization.PieChart(document.getElementById('question1')).
-      draw(data1);
-  new google.visualization.PieChart(document.getElementById('question2')).
-      draw(data2);
-  new google.visualization.PieChart(document.getElementById('question3')).
-      draw(data3);
-  new google.visualization.PieChart(document.getElementById('question4')).
-      draw(data4);
-  new google.visualization.PieChart(document.getElementById('question5')).
-      draw(data5);
+        new google.visualization.PieChart(document.getElementById('question'+q)).
+        draw(data);
+        console.log('question'+q)
+    };
 }
 
 google.setOnLoadCallback(drawVisualization);
 </script>
 
-<!-- body > div > div:nth-child(5) > p:nth-child(3)
-body > div > div:nth-child(5) > p:nth-child(5)
-body > div > div:nth-child(5) > p:nth-child(7)
-body > div > div:nth-child(5) > p:nth-child(9)
-body > div > div:nth-child(5) > p:nth-child(11) -->
-
-<!-- parseInt($($(questions[0]).find('p')[0]).text()[0]) -->
