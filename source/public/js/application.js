@@ -20,12 +20,15 @@ $(document).ready(function () {
     }); //#sign-in
 
   // Dynamic add questions
-  var i = 6;
   $("#add_question").on("click", function(){
-    var q = "<p id='question"+i+"'>Question "+i+": <input type='text'></p>";
+    var i = $("form > p").size() + 1;
+    var q = "<p id='question"+i+"'>Question "+i+": <input type='text'><button class='remove_question' type='button'>Remove Question</button></p>";
     $("#add_question").before(q);
     $("#question"+i).hide().fadeIn(250);
-    i++;
+  })
+  // Dynamic delete questions
+  $("form").on("click", ".remove_question", function(){
+    $(this).closest("p").remove();
   })
 
   }); //document ready
