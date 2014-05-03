@@ -6,15 +6,58 @@
   <br>
 
   <% @survey.questions.each_with_index do |question, index| %>
-
+    <div class="question">
     <h2><%= question.question %></h2>
+      <% user_result = [] %>
       <% for j in (1..5) %>
-        <p><% @users_count = @survey.questions[index].answers.where(answer:(j)).count %></p>
+        <% @users_count = @survey.questions[index].answers.where(answer:(j)).count %>
         <p><%= @users_count %> <%= @users_count ==1 ? "user" : "users" %> said <%= answer_to_text(j,@users_count) %></p>
+
       <% end %>
       <% if question.answers.any? %>
-        <p>Average: <%= average_result(question.id).round(2) %> out of 5</p>
+        <h3>Average: <%= average_result(question.id).round(2) %> out of 5</h3>
         <br>
       <% end %>
+      <div id="question<%= index %>" style="width: 600px; height: 400px"></div>
+    </div>
   <% end %>
 </div>
+
+
+<script type="text/javascript">
+function drawVisualization() {
+  questions = $('.question');
+  console.log(questions)
+  // Create and populate the data table.
+
+  for ( var q=0; q<questions.length; q++ )
+    {
+      console.log(q);
+      // for ( var l=0; l<5; l++)
+      // {
+      // var 'count'+l = parseInt($($(questions[q]).find('p')[l]).text()[0]);
+      // };
+      var count1 = parseInt($($(questions[q]).find('p')[0]).text()[0]);
+      var count2 = parseInt($($(questions[q]).find('p')[1]).text()[0]);
+      var count3 = parseInt($($(questions[q]).find('p')[2]).text()[0]);
+      var count4 = parseInt($($(questions[q]).find('p')[3]).text()[0]);
+      var count5 = parseInt($($(questions[q]).find('p')[4]).text()[0]);
+      var data = google.visualization.arrayToDataTable([
+        ['Opinion', 'Count'],
+        ['Really don\'t like it', count1],
+        ['It\'s just okay', count2],
+        ['They\'re indifferent', count3],
+        ['It\'s good', count4],
+        ['Love it!!', count5]
+
+        ]);
+
+        new google.visualization.PieChart(document.getElementById('question'+q)).
+        draw(data);
+        console.log('question'+q)
+    };
+}
+
+google.setOnLoadCallback(drawVisualization);
+</script>
+
