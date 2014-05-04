@@ -41,3 +41,24 @@ post "/create_survey" do
   @survey_id = survey.id
   redirect "/surveys"
 end
+
+get "/delete/survey/:id" do
+  @survey_id = params[:id]
+  @survey = Survey.find(@survey_id)
+
+  question_ids = []
+  @survey.questions.each do |question|
+    question_ids << question.id
+  end
+
+  question_ids.each do |id|
+    Answer.where(question_id: id).destroy_all
+  end
+
+  Question.where(survey_id: @survey_id).destroy_all
+
+  @survey.destroy
+
+  redirect "/profile"
+end
+
