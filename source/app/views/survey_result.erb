@@ -1,4 +1,4 @@
-<div class= "container">
+<div class= "container" style="width: 1000px">
   <h1><%= @survey.name %></h1>
   <h3>By: <%= @survey.user.username %></h3>
 
@@ -7,19 +7,21 @@
 
   <% @survey.questions.each_with_index do |question, index| %>
     <div class="question">
-    <h2><%= question.question %></h2>
-      <% user_result = [] %>
-      <% for j in (1..5) %>
-        <% @users_count = @survey.questions[index].answers.where(answer:(j)).count %>
-        <p><%= @users_count %> <%= @users_count ==1 ? "user" : "users" %> said <%= answer_to_text(j,@users_count) %></p>
+      <div class="question-stats">
+      <h2><%= question.question %></h2>
+        <% user_result = [] %>
+        <% for j in (1..5) %>
+          <% @users_count = @survey.questions[index].answers.where(answer:(j)).count %>
+          <p><%= @users_count %> <%= @users_count ==1 ? "user" : "users" %> said <%= answer_to_text(j,@users_count) %></p>
 
-      <% end %>
-      <% if question.answers.any? %>
-        <h3>Average: <%= average_result(question.id).round(2) %> out of 5</h3>
-        <br>
-      <% end %>
+        <% end %>
+        <% if question.answers.any? %>
+          <h3>Average: <%= average_result(question.id).round(2) %> out of 5</h3>
+          <br>
+        <% end %>
+      </div>
       <% if @times != 0 %>
-        <div id="question<%= index %>" style="width: 600px; height: 400px"></div>
+        <div class="pie-chart" id="question<%= index %>" style="width: 600px; height: 400px"></div>
       <% end %>
     </div>
   <% end %>

@@ -56,7 +56,8 @@ form#signin  {
 #topcenter {
   width:20%;
   text-align: center;
-padding-left: 10%;}
+  padding-left: 15.3%;
+}
 #topright {
   width:50%;
   float:right;
@@ -83,3 +84,19 @@ padding-left: 10%;}
 /*#profile_list a:link {text-decoration:none; color:#0000FF;}
 #profile_list a:visited {text-decoration:none; color:#0000FF;}
 #profile_list a:hover {text-decoration:underline;color:#ff0000;}*/
+.question {
+  border-bottom: 1px solid black;
+}
+
+.question-stats {
+  width: 400px;
+  margin: 0px;
+  float: left;
+  padding-top: 45px;
+  display: inline-block;
+}
+
+.pie-chart {
+  margin: 0px;
+  display: inline-block;
+}
