@@ -4,7 +4,7 @@
     <div>
     <form id="survey-answers" style="text-align: left" method="post" action="/save_answers/<%= @survey.id %>">
       <% @survey.questions.each do |question| %>
-        <div> <%= question.question %> </div><br>
+        <div class="survey-question"> <%= question.question %> <br>
           <!-- <form> -->
             <input type="radio" name="Question_<%= question.id %>" value="1"> I really don't like it <br>
             <input type="radio" name="Question_<%= question.id %>" value="2"> It's just okay <br>
@@ -14,7 +14,24 @@
             <br><br>
           <!-- </form><br> -->
       <% end %><br>
+      </div>
       <input type="submit" name="submit" value="Send Answers!">
     </form>
     </div>
 </div>
+
+
+<script>
+  var $questions = $('.survey-question')
+
+  $('#survey-answers').on("submit", function(e) {
+    if (($questions.find("input:radio:checked").length) === ($questions.length)) {
+      return true;
+    }
+    else {
+      e.preventDefault();
+      alert("Please complete the entire survey!");
+    }
+  });
+
+</script>
