@@ -1,1 +1,8 @@
-#justin is working on profile 
+#justin is working on profile
+<p><%= @user.username %></p>
+<h2>Surveys Created</h2>
+<% @surveys.each do |survey| %>
+  <h3><%= survey.name %></h3>
+  <a href="/delete/survey/<%=survey.id%>">Delete</a>
+  <a href="/update/survey/<%=survey.id%>">Update</a>
+<% end %>

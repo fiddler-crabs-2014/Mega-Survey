@@ -23,14 +23,14 @@ post "/signin" do
   end
 end
 
-get "/user_id/:id" do
-  if params[:id] == session[:user_id]
-    user = User.find(session[:user_id])
-    question_ids = user.answers.map { |ans| ans.question_id }.uniq
-    answered_survey_ids = Survey.find(question_id)
-    @surveys = user.surveys
-    @answered_surveys = Survey.find(answered_survey_ids) # prepare an array of question ID's for view to
-    erb :user
+get "/profile" do
+  if session[:user_id]
+    @user = User.find(session[:user_id])
+    question_ids = @user.answers.map { |ans| ans.question_id }.uniq # return all uniq question IDs
+    answered_survey_ids = question_ids.map{|id| Question.find(id).survey_id}.uniq
+    @surveys = @user.surveys
+    @answered_surveys = Survey.find(answered_survey_ids) # prepare an array of question IDs for view to
+    erb :profile
   else
     redirect "/"
   end
