@@ -64,4 +64,11 @@ padding-left: 10%;}
   list-style-type: none;
   padding-right: 20px;
 }
-
+#profile_list h3 {
+  text-align: left;
+}
+#profile_list ul {
+  text-align: left;
+}
+#profile_list a {
+}
