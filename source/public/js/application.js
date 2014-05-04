@@ -30,7 +30,7 @@ $(document).ready(function () {
   // Dynamic add questions
   $("#add_question").on("click", function(){
     var i = $("form > p").size() + 1;
-    var q = "<p id='question"+i+"'>Question "+i+": <input type='text' name='question"+i+"'><button class='remove_question' type='button'>Remove Question</button></p>";
+    var q = "<p id='question"+i+"'>Question "+i+": <input type='text' name='question"+i+"' required><button class='remove_question' type='button'>Remove Question</button></p>";
     $("#add_question").before(q);
     $("#question"+i).hide().fadeIn(250);
   })
