@@ -67,7 +67,7 @@ Question.create(:question => "How much do you like Extreme Ironing?")]
 
 
 ss_questions.each do |question|
-  programming_survey.questions << question
+  sport_survey.questions << question
 end
 
 25.times do
