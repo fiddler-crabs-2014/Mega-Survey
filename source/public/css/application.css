@@ -35,6 +35,12 @@ nav ul {
 nav li {
 
 }
+
+a:link {text-decoration:none; color:#0000FF;}
+a:visited {text-decoration:none; color:#0000FF;}
+a:hover {text-decoration:none; color:#ff0000;}
+
+
 header a:link {text-decoration:none; color:#FFF;}
 header a:visited {text-decoration:none;color:#FFF;}
 header a:hover {text-decoration:underline;color:#ff0;}
@@ -71,4 +77,9 @@ padding-left: 10%;}
   text-align: left;
 }
 #profile_list a {
+
 }
+
+/*#profile_list a:link {text-decoration:none; color:#0000FF;}
+#profile_list a:visited {text-decoration:none; color:#0000FF;}
+#profile_list a:hover {text-decoration:underline;color:#ff0000;}*/

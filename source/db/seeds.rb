@@ -5,7 +5,7 @@ def take_survey(survey)
 end
 
 phil = User.create(:username => "Phil", :password => "Password")
-shaun = User.create(:username => "Shaun", :password => "test")
+shaun = User.create(:username => "Shaun", :password => "test123")
 
 food_survey = Survey.create(:name => "Favorite Foods")
 
