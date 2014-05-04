@@ -27,3 +27,29 @@ end
   take_survey(Survey.find(1))
 end
 
+
+programming_survey = Survey.create(:name => "What's your favorite Programming Language")
+
+shaun.surveys << programming_survey
+
+ps_questions = [
+Question.create(:question => "How much do you like Ruby"),
+Question.create(:question => "How much do you like JavaScript?"),
+Question.create(:question => "How much do you like jQuery?"),
+Question.create(:question => "How much do you like C++?"),
+Question.create(:question => "How much do you like Insung?"),
+Question.create(:question => "How much do you like HTML?"),
+Question.create(:question => "How much do you like CSS?"),
+Question.create(:question => "How much do you like Angular")]
+
+
+ps_questions.each do |question|
+  programming_survey.questions << question
+end
+
+50.times do
+  take_survey(Survey.find(2))
+end
+
+
+
