@@ -1,14 +1,16 @@
-<h2>Create Survey</h2>
+<div class="container">
+    <h2>Create Survey</h2>
 
-<div id="survey" class="survey">
-  <form action="/create_survey" method="POST">
-    Title: <input type="text" name="name" required>
-    <p id="question1" >Question 1: <input type="text" name="question1" required><button class='remove_question' type='button'>Remove Question</button></p>
-    <p id="question2">Question 2: <input type="text" name="question2" required><button class='remove_question' type='button'>Remove Question</button></p>
-    <p id="question3">Question 3: <input type="text" name="question3" required><button class='remove_question' type='button'>Remove Question</button></p>
-    <p id="question4">Question 4: <input type="text" name="question4" required><button class='remove_question' type='button'>Remove Question</button></p>
-    <p id="question5">Question 5: <input type="text" name="question5" required><button class='remove_question' type='button'>Remove Question</button></p>
-    <button id="add_question" type="button">Add Question</button>
-    <input id="submit" type="submit" value="Create Survey">
-  </form>
+    <div id="survey" class="survey">
+      <form action="/create_survey" method="POST">
+        Title: <input type="text" name="name" required>
+        <p id="question1" >Question 1: <input type="text" name="question1" required>&nbsp;<button class='remove_question' type='button'>Remove Question</button></p>
+        <p id="question2">Question 2: <input type="text" name="question2" required>&nbsp;<button class='remove_question' type='button'>Remove Question</button></p>
+        <p id="question3">Question 3: <input type="text" name="question3" required>&nbsp;<button class='remove_question' type='button'>Remove Question</button></p>
+        <p id="question4">Question 4: <input type="text" name="question4" required>&nbsp;<button class='remove_question' type='button'>Remove Question</button></p>
+        <p id="question5">Question 5: <input type="text" name="question5" required>&nbsp;<button class='remove_question' type='button'>Remove Question</button></p>
+        <button id="add_question" type="button">Add Question</button>
+        <input id="submit" type="submit" value="Create Survey">
+      </form>
+    </div>
 </div>
