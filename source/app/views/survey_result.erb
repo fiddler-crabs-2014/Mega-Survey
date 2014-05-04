@@ -37,7 +37,7 @@ function drawVisualization() {
 
       for ( var l=0; l<5; l++)
       {
-      hash[l] = parseInt($($(questions[q]).find('p')[l]).text()[0]);
+      hash[l] = parseInt($($(questions[q]).find('p')[l]).text().match(/\d+/).join());
       };
 
       var data = google.visualization.arrayToDataTable([
