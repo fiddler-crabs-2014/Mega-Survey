@@ -24,33 +24,30 @@
 </div>
 
 
+<!-- Pie Chart JavaScript -->
 <script type="text/javascript">
 function drawVisualization() {
   questions = $('.question');
   console.log(questions)
-  // Create and populate the data table.
 
   for ( var q=0; q<questions.length; q++ )
     {
-      console.log(q);
-      // for ( var l=0; l<5; l++)
-      // {
-      // var 'count'+l = parseInt($($(questions[q]).find('p')[l]).text()[0]);
-      // };
-      var count1 = parseInt($($(questions[q]).find('p')[0]).text()[0]);
-      var count2 = parseInt($($(questions[q]).find('p')[1]).text()[0]);
-      var count3 = parseInt($($(questions[q]).find('p')[2]).text()[0]);
-      var count4 = parseInt($($(questions[q]).find('p')[3]).text()[0]);
-      var count5 = parseInt($($(questions[q]).find('p')[4]).text()[0]);
+
+      var hash = {};
+
+      for ( var l=0; l<5; l++)
+      {
+      hash[l] = parseInt($($(questions[q]).find('p')[l]).text()[0]);
+      };
+
       var data = google.visualization.arrayToDataTable([
         ['Opinion', 'Count'],
-        ['Really don\'t like it', count1],
-        ['It\'s just okay', count2],
-        ['They\'re indifferent', count3],
-        ['It\'s good', count4],
-        ['Love it!!', count5]
-
-        ]);
+        ['Really don\'t like it', hash[0]],
+        ['It\'s just okay', hash[1]],
+        ['They\'re indifferent', hash[2]],
+        ['It\'s good', hash[3]],
+        ['Love it!!', hash[4]]
+      ]);
 
         new google.visualization.PieChart(document.getElementById('question'+q)).
         draw(data);
