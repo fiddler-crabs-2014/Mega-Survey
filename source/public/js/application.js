@@ -9,15 +9,23 @@ $(document).ready(function () {
 
   $('#signinform').submit(function(e) {
     e.preventDefault(console.log("ajax intercept"));
-    $.ajax({
+    var request = $.ajax({
       type: 'POST',
       url: '/signin',
-      data: $("#signinform").serialize(),
-      success: function(){
-      console.log("User logged in"),
-      window.location.replace("/");}
-      }); //$ajax
-    }); //#sign-in
+      data: $("#signinform").serialize()
+    }); //$ajax
+
+    request.done(function() {
+      console.log("user logged in");
+      window.location.replace("/");
+    }); // signin successful
+
+    request.fail(function() {
+      var toprightBox = $($('#topright').find('li')[0])
+      alert("Wrong Password or Username!");
+    }); // signin fails
+
+  }); //#sign-in
 
   // Dynamic add questions
   $("#add_question").on("click", function(){
