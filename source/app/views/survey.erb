@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Take <%= @survey.name %> survey!</h2>
+  <h2><%= @survey.name %></h2>
   <h3> by: <%= @survey.user.username %> </h3>
     <div>
     <form id="survey-answers" style="text-align: left" method="post" action="/save_answers/<%= @survey.id %>">
