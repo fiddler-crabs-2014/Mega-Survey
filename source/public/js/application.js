@@ -37,6 +37,7 @@ $(document).ready(function () {
   // Dynamic delete questions
   $("form").on("click", ".remove_question", function(){
     $(this).closest("p").remove();
-  })
+  });
 
-  }); //document ready
+
+}); //document ready
