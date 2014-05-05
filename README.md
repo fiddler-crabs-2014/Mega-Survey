@@ -1,11 +1,11 @@
 # GIT WORKFLOW
 
-1. git clone <repo_name>
-2. git checkout -b <branch_name> (NOTE: when creating a new branch, use feature/<branch_name>, chore/<branch_name>, bug/<branch_name>)
+1. git clone https://github.com/fiddler-crabs-2014/Mega-Survey.git
+2. git checkout -b branch_name (NOTE: when creating a new branch, use feature/branch_name, chore/branch_name, bug/branch_name)
 3. when finished with changes in branch
     1. git add .
-    2. git commit -m "<commit message>"
-    3. git push origin <branch_name>
+    2. git commit -m "commit message"
+    3. git push origin branch_name
 4. go back to github and send a new pull request from your branch
 5. tell the other members on your team to review it
 6. review and merge pull request
