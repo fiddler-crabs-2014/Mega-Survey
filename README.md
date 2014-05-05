@@ -1,4 +1,16 @@
-# Survey Gorilla
+# GIT WORKFLOW
+
+1. git clone <repo_name>
+2. git checkout -b <branch_name> (NOTE: when creating a new branch, use feature/<branch_name>, chore/<branch_name>, bug/<branch_name>)
+3. when finished with changes in branch
+    1. git add .
+    2. git commit -m "<commit message>"
+    3. git push origin <branch_name>
+4. go back to github and send a new pull request from your branch
+5. tell the other members on your team to review it
+6. review and merge pull request
+
+<!-- # Survey Gorilla
 
 ## Learning Competencies
 
@@ -138,4 +150,4 @@ How about multiple question types?
 [d3.js]: http://d3js.org/)
 [Flot]: http://www.flotcharts.org/
 [Highcharts]: http://www.highcharts.com/
-[modal dialog]: http://www.ericmmartin.com/projects/simplemodal/
+[modal dialog]: http://www.ericmmartin.com/projects/simplemodal/ -->
