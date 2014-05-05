@@ -1,6 +1,6 @@
 # GIT WORKFLOW
 
-1. git clone <repo_name>
+1. git clone &ltrepo_name>
 2. git checkout -b <branch_name> (NOTE: when creating a new branch, use feature/<branch_name>, chore/<branch_name>, bug/<branch_name>)
 3. when finished with changes in branch
     1. git add .
